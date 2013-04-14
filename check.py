@@ -18,8 +18,8 @@ def check_for_phone():
 	f = urllib.request.urlopen("http://%s/st_wireless.htm" % router_address)
 	data = f.read().decode('utf-8')
 
-# search the HTML source for my MAC address
-	# if find() doesn't find what it's looking for, it returns -1
+	# search the HTML source for my MAC address
+	# (if find() doesn't find what it's looking for, it returns -1)
 	if(data.find(target) == -1):
 	  result = False
 	else:
