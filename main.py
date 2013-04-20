@@ -1,11 +1,11 @@
 import subprocess
-import check
+from check import check_for_phone
 import time
 
 running = False
 while True:
   # every minute check if phone exists
-  if(check.check_for_phone() == False):
+  if(check_for_phone() == False):
     print("Phone is NOT connected to router")
     
     # if it doesn't, run motion, only if it isn't running already
