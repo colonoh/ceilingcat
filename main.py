@@ -6,28 +6,24 @@ import time
 
 running = False
 while True:
-	# every minute
-	# check if phone exists
+	# every minute check if phone exists
 	status = check.check_for_phone()
-	print('Status is', status)
-	if(status == 0):
-	  print("PHONE IS NOT PRESENT")
-	  # if it doesn't, run motion
-	  # ONLY IF IT ISN'T RUNNING ALREADY
+	if(status == False):
+	  print("Phone is not present")
+	  # if it doesn't, run motion, only if it isn't running already
 	  if(running == False):
-	    #p = subprocess.call(['motion', '-n'])
-	    #p = subprocess.call(['motion', '-l', 'log.txt'])
+	    print("Startiong motion")
 	    subprocess.call(['/home/steve/motion/motion', '-c', 'motion.conf', '-l', 'log.txt'])
-            # TODO: ADD -l log.txt, doesn't seem to send e-mail unless -n (non-daemon mode) is used, but then gets stuck in following process
 	    running = True
 	else:
-	  # if it does, kill kill motion
-	  # get motion id and kill 
-	  print("KILLING MOTION")
-	  subprocess.call(['pkill', 'motion'])
-	  running = False
-	print("Sleeping 60 seconds...")
-	time.sleep(10)
+	  # if it does, kill motion
+	  print("Phone is not present")
+	  if(running == True):
+      print("Killing motion")
+      subprocess.call(['pkill', 'motion'])
+      running = False
+  print("Sleeping 60 seconds...")
+	time.sleep(60)
 
 
 
