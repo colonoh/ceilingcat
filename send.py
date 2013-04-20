@@ -8,7 +8,7 @@ from email.mime.image import MIMEImage
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-images_dir = 'test_images'
+images_dir = '/home/steve/images'
 
 msg = MIMEMultipart()
 
