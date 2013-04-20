@@ -15,7 +15,7 @@ def check_for_phone():
 	# login page
 	f = urllib.request.urlopen("http://%s/login.cgi" % router_address, params)
 	# connected wireless devices page
-	f = urllib.request.urlopen("http://%s/st_wireless.htm" % router_address)
+	f = urllib.request.urlopen("http://%s/lan.htm" % router_address)
 	data = f.read().decode('utf-8')
 
 	# search the HTML source for my MAC address, if it returns -1 it means it didn't find it
