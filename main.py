@@ -2,8 +2,6 @@ import subprocess
 import check
 import time
 
-# THIS IS SHIT
-
 running = False
 while True:
   # every minute check if phone exists
