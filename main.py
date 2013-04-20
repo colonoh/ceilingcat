@@ -6,7 +6,7 @@ import time
 
 running = False
 while True:
-	# every minute check if phone exists
+  # every minute check if phone exists
 	status = check.check_for_phone()
 	if(status == False):
 	  print("Phone is not present")
@@ -24,6 +24,3 @@ while True:
       running = False
   print("Sleeping 60 seconds...")
 	time.sleep(60)
-
-
-
