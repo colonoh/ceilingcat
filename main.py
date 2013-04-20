@@ -17,7 +17,7 @@ while True:
 	  if(running == False):
 	    #p = subprocess.call(['motion', '-n'])
 	    #p = subprocess.call(['motion', '-l', 'log.txt'])
-	    subprocess.call(['motion', '-l', 'log.txt'])
+	    subprocess.call(['/home/steve/motion/motion', '-c', 'motion.conf', '-l', 'log.txt'])
             # TODO: ADD -l log.txt, doesn't seem to send e-mail unless -n (non-daemon mode) is used, but then gets stuck in following process
 	    running = True
 	else:
