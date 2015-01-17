@@ -8,7 +8,7 @@ def check_for_phone():
 	password = '64eec07f11'
 	router_address = '192.168.0.1'
 	# MAC address of my phone
-	phone_MAC_address = '00-11-94-ba-49-3c'
+	phone_MAC_address = '00-11-45-b5-a8-96'
 	
 	params = urllib.parse.urlencode({'login_name' : username, 'login_pass' : password, 'login' : 'Log+in'})
 	params = params.encode('utf-8')
